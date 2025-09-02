@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Artisan Muse - Warm Neutrals (from @color1 palette) */
+    /* Hex reference: F3E8D7, E3D2BE, D3BCA6, C3A78D, B39175, A37B5C */
+    --background: 34 60% 91%; /* F3E8D7 */
+    --foreground: 27 25% 22%; /* deep warm brown */
+
+    --card: 0 0% 100%;
+    --card-foreground: 27 25% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 25% 22%;
+
+    --primary: 27 30% 50%; /* A37B5C */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 30% 58%; /* B39175 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 30% 85%; /* E3D2BE tint */
+    --muted-foreground: 27 15% 35%;
+
+    --accent: 33 30% 74%; /* D3BCA6 */
+    --accent-foreground: 27 25% 22%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 33 25% 82%; /* E3D2BE */
+    --input: 33 25% 82%;
+    --ring: 27 30% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 34 55% 93%; /* slightly lighter than page bg */
+    --sidebar-foreground: 27 25% 22%;
+    --sidebar-primary: 27 30% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 33 30% 88%;
+    --sidebar-accent-foreground: 27 25% 22%;
+    --sidebar-border: 33 25% 82%;
+    --sidebar-ring: 28 30% 58%;
+  }
+
+  .dark {
+    /* Dark mode – warm neutrals */
+    --background: 27 30% 18%;
+    --foreground: 34 60% 92%;
+
+    --card: 27 30% 22%;
+    --card-foreground: 34 60% 92%;
+
+    --popover: 27 30% 22%;
+    --popover-foreground: 34 60% 92%;
+
+    --primary: 33 30% 74%; /* D3BCA6 for highlight on dark */
+    --primary-foreground: 27 25% 22%;
+
+    --secondary: 28 30% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 27 18% 28%;
+    --muted-foreground: 34 35% 85%;
+
+    --accent: 27 22% 32%;
+    --accent-foreground: 34 60% 92%;
+
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 0 0% 90%;
+
+    --border: 27 22% 28%;
+    --input: 27 22% 28%;
+    --ring: 33 30% 74%;
+
+    --sidebar-background: 27 28% 20%;
+    --sidebar-foreground: 34 60% 92%;
+    --sidebar-primary: 33 30% 74%;
+    --sidebar-primary-foreground: 27 25% 22%;
+    --sidebar-accent: 27 22% 28%;
+    --sidebar-accent-foreground: 34 60% 92%;
+    --sidebar-border: 27 20% 24%;
+    --sidebar-ring: 28 30% 58%;
+  }
+
+  .light {
+    /* Light mode - warm neutrals */
+    --background: 34 60% 91%;
+    --foreground: 27 25% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 27 25% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 25% 22%;
+
+    --primary: 27 30% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 30% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 30% 85%;
+    --muted-foreground: 27 15% 35%;
+
+    --accent: 33 30% 74%;
+    --accent-foreground: 27 25% 22%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 33 25% 82%;
+    --input: 33 25% 82%;
+    --ring: 27 30% 50%;
+
+    --sidebar-background: 34 55% 93%;
+    --sidebar-foreground: 27 25% 22%;
+    --sidebar-primary: 27 30% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 33 30% 88%;
+    --sidebar-accent-foreground: 27 25% 22%;
+    --sidebar-border: 33 25% 82%;
+    --sidebar-ring: 28 30% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Default to light theme for the new color palette */
+  html {
+    @apply light;
+  }
+}
